@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OryoHub.com — All Tools In One Place, Free Forever</title>
+  <meta name="description" content="Compress PDF, Edit PDF, QR Generator, Word Tools & 100+ Free Tools. No Sign-up. No Watermark. 100% Free." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- TOP STICKY NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <!-- Left: Logo -->
+      <a href="#home" class="logo" aria-label="OryoHub Home">
+        <div class="logo-mark" aria-hidden="true">
+          <span class="ribbon ribbon-blue"></span>
+          <span class="ribbon ribbon-cyan"></span>
+          <span class="ribbon ribbon-purple"></span>
+        </div>
+        <span class="logo-text">
+          <span class="logo-oryo">Oryo</span><span class="logo-hub">Hub</span>
+        </span>
+      </a>
+
+      <!-- Center: Search Bar -->
+      <div class="nav-search">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="text"
+          id="navSearchInput"
+          class="search-input"
+          placeholder="Search any tool..."
+          aria-label="Search any tool"
+        />
+        <button type="button" id="clearSearchBtn" class="clear-search" aria-label="Clear search" hidden>✕</button>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button
+        type="button"
+        class="hamburger"
+        id="hamburgerBtn"
+        aria-label="Toggle Menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Right: Controls & Links -->
+      <nav class="nav-actions" id="navMenu">
+        <!-- Language Selector -->
+        <div class="lang-dropdown" id="langDropdown">
+          <button type="button" class="btn-icon lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            🌐 <span id="selectedLang">EN</span> ▾
+          </button>
+          <ul class="lang-menu" id="langMenu" role="menu">
+            <li role="menuitem"><button type="button" data-code="EN">English (EN)</button></li>
+            <li role="menuitem"><button type="button" data-code="ES">Español (ES)</button></li>
+            <li role="menuitem"><button type="button" data-code="FR">Français (FR)</button></li>
+            <li role="menuitem"><button type="button" data-code="DE">Deutsch (DE)</button></li>
+            <li role="menuitem"><button type="button" data-code="ZH">中文 (ZH)</button></li>
+            <li role="menuitem"><button type="button" data-code="UR">اردو (UR)</button></li>
+            <li role="menuitem"><button type="button" data-code="HI">हिन्दी (HI)</button></li>
+          </ul>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button type="button" class="btn-icon theme-btn" id="themeToggle" aria-label="Toggle Dark Mode">
+          🌙
+        </button>
+
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#tools" class="nav-link">Tools</a>
+        <a href="#govgigz" class="btn btn-primary btn-sm">GovGigz</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="container hero-content fade-in">
+        <div class="hero-badge">🌍 Trusted by 1M+ Users in 150+ Countries</div>
+        <h1 class="hero-title">
+          All Tools In One Place<br />
+          <span class="gradient-text">Free Forever</span>
+        </h1>
+        <p class="hero-subtitle">
+          Compress PDF, Edit PDF, QR Generator, Word Tools &amp; 100+ Free Tools. No Sign-up. No Watermark. 100% Free.
+        </p>
+
+        <div class="hero-rating">
+          <span class="stars">4.9 ★★★★★</span>
+          <span class="dot">•</span>
+          <span>12,000+ Reviews</span>
+          <span class="dot">•</span>
+          <span>1M+ Users</span>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#tools" class="btn btn-primary btn-lg">Explore Tools →</a>
+          <a href="#govgigz" class="btn btn-outline btn-lg">GovGigz Jobs</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <strong>100+</strong>
+            <span>Free Tools</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong>1M+</strong>
+            <span>Users</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong>150+</strong>
+            <span>Countries</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <strong>4.9 ★</strong>
+            <span>Rating</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD PLACEHOLDER 1 (AFTER HERO) -->
+    <div class="container">
+      <div class="ad-box ad-leaderboard">Advertisement - Google AdSense 728x90</div>
+    </div>
+
+    <!-- SEARCH + FILTER BAR -->
+    <section class="filter-section" id="tools">
+      <div class="container">
+        <div class="filter-bar">
+          <div class="filter-search">
+            <span class="search-icon" aria-hidden="true">🔎</span>
+            <input
+              type="text"
+              id="mainSearchInput"
+              class="search-input"
+              placeholder="Filter tools by name or keyword (e.g. PDF, QR, Word, Image)..."
+              aria-label="Filter tools"
+            />
+          </div>
+          <div class="filter-pills" role="tablist" aria-label="Tool Categories">
+            <button type="button" class="pill active" data-filter="all">All</button>
+            <button type="button" class="pill" data-filter="pdf">PDF Tools</button>
+            <button type="button" class="pill" data-filter="word">Word Tools</button>
+            <button type="button" class="pill" data-filter="image">Image Tools</button>
+            <button type="button" class="pill" data-filter="govgigz">GovGigz</button>
+            <button type="button" class="pill" data-filter="popular">Popular</button>
+          </div>
+        </div>
+        <div id="noResultsMessage" class="no-results" hidden>
+          <p>No tools matched your search. Try another keyword or reset filters.</p>
+          <button type="button" id="resetFiltersBtn" class="btn btn-primary btn-sm">Reset Filters</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- POPULAR TODAY SECTION -->
+    <section class="section tool-section" data-section="popular">
+      <div class="container">
+        <div class="section-header-center fade-in">
+          <h2 class="section-title">🔥 Popular Today</h2>
+          <p class="section-subtitle">Most used tools today by users worldwide</p>
+        </div>
+
+        <div class="grid-3">
+          <!-- Featured Card 1 -->
+          <article class="card featured-card fade-in tool-card" data-category="pdf popular" data-keywords="compress pdf reduce size optimizer">
+            <span class="badge badge-hot">HOT</span>
+            <div class="card-icon">🗜️</div>
+            <h3 class="card-title">Compress PDF</h3>
+            <p class="card-desc">Reduce PDF size by 90% free</p>
+            <div class="card-rating">★★★★★ <span>(4.9)</span></div>
+            <button type="button" class="btn btn-primary btn-block open-tool-btn" data-tool="Compress PDF">Use Now</button>
+          </article>
+
+          <!-- Featured Card 2 -->
+          <article class="card featured-card fade-in tool-card" data-category="popular" data-keywords="qr generator barcode code maker">
+            <span class="badge badge-trending">TRENDING</span>
+            <div class="card-icon">📱</div>
+            <h3 class="card-title">QR Generator</h3>
+            <p class="card-desc">Create QR code in 2 seconds</p>
+            <div class="card-rating">★★★★★ <span>(4.9)</span></div>
+            <button type="button" class="btn btn-primary btn-block open-tool-btn" data-tool="QR Generator">Use Now</button>
+          </article>
+
+          <!-- Featured Card 3 -->
+          <article class="card featured-card fade-in tool-card" data-category="pdf popular" data-keywords="merge pdf combine join files">
+            <span class="badge badge-new">NEW</span>
+            <div class="card-icon">📑</div>
+            <h3 class="card-title">Merge PDF</h3>
+            <p class="card-desc">Combine multiple PDFs into one</p>
+            <div class="card-rating">★★★★★ <span>(4.8)</span></div>
+            <button type="button" class="btn btn-primary btn-block open-tool-btn" data-tool="Merge PDF">Use Now</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD PLACEHOLDER 2 (AFTER POPULAR TODAY) -->
+    <div class="container">
+      <div class="ad-box">Advertisement</div>
+    </div>
+
+    <!-- PDF TOOLS SECTION -->
+    <section class="section tool-section" data-section="pdf">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-label">PDF TOOLS</h2>
+          <a href="#tools" class="view-all-link" data-select-cat="pdf">View all 12+ tools →</a>
+        </div>
+
+        <div class="grid-4">
+          <article class="card tool-card fade-in" data-category="pdf" data-keywords="edit pdf text annotate modify">
+            <div class="card-icon-lg">✏️</div>
+            <h3 class="card-title">Edit PDF</h3>
+            <p class="card-desc">Edit text in PDF free</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Edit PDF">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="pdf word" data-keywords="pdf to word docx convert editable">
+            <div class="card-icon-lg">📄</div>
+            <h3 class="card-title">PDF to Word</h3>
+            <p class="card-desc">Convert PDF to editable Word</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="PDF to Word">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="pdf" data-keywords="merge pdf combine join">
+            <div class="card-icon-lg">🔗</div>
+            <h3 class="card-title">Merge PDF</h3>
+            <p class="card-desc">Combine PDFs into one</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Merge PDF">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="pdf" data-keywords="compress pdf shrink size">
+            <div class="card-icon-lg">📦</div>
+            <h3 class="card-title">Compress PDF</h3>
+            <p class="card-desc">Reduce PDF size</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Compress PDF">Open Tool →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- AD PLACEHOLDER 3 (AFTER PDF TOOLS) -->
+    <div class="container">
+      <div class="ad-box">Advertisement</div>
+    </div>
+
+    <!-- WORD TOOLS SECTION -->
+    <section class="section tool-section" data-section="word">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-label">WORD TOOLS</h2>
+          <a href="#tools" class="view-all-link" data-select-cat="word">View all 10+ tools →</a>
+        </div>
+
+        <div class="grid-4">
+          <article class="card tool-card fade-in" data-category="word pdf" data-keywords="word to pdf doc docx convert">
+            <div class="card-icon-lg">📝</div>
+            <h3 class="card-title">Word to PDF</h3>
+            <p class="card-desc">Convert Word to PDF</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Word to PDF">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="word pdf" data-keywords="pdf to word convert docx">
+            <div class="card-icon-lg">📘</div>
+            <h3 class="card-title">PDF to Word</h3>
+            <p class="card-desc">Convert PDF to Word</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="PDF to Word">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="word" data-keywords="merge word combine documents">
+            <div class="card-icon-lg">📚</div>
+            <h3 class="card-title">Merge Word</h3>
+            <p class="card-desc">Combine Word files</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Merge Word">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="word" data-keywords="word counter character count text">
+            <div class="card-icon-lg">🔢</div>
+            <h3 class="card-title">Word Counter</h3>
+            <p class="card-desc">Count words free</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Word Counter">Open Tool →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- IMAGE TOOLS SECTION -->
+    <section class="section tool-section" data-section="image">
+      <div class="container">
+        <div class="section-header fade-in">
+          <h2 class="section-label">IMAGE TOOLS</h2>
+          <a href="#tools" class="view-all-link" data-select-cat="image">Explore all image tools →</a>
+        </div>
+
+        <div class="grid-4">
+          <article class="card tool-card fade-in" data-category="image" data-keywords="jpg to png convert image format">
+            <div class="card-icon-lg">🖼️</div>
+            <h3 class="card-title">JPG to PNG</h3>
+            <p class="card-desc">Convert JPG images to transparent PNG</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="JPG to PNG">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="image" data-keywords="compress image optimize photo size">
+            <div class="card-icon-lg">⚡</div>
+            <h3 class="card-title">Compress Image</h3>
+            <p class="card-desc">Shrink image file size without quality loss</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Compress Image">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="image" data-keywords="resize image dimensions crop scale">
+            <div class="card-icon-lg">📐</div>
+            <h3 class="card-title">Resize Image</h3>
+            <p class="card-desc">Change width &amp; height in pixels or %</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Resize Image">Open Tool →</button>
+          </article>
+
+          <article class="card tool-card fade-in" data-category="image" data-keywords="background remover transparent cutout ai">
+            <div class="card-icon-lg">🪄</div>
+            <h3 class="card-title">Background Remover</h3>
+            <p class="card-desc">Remove image backgrounds in one click</p>
+            <button type="button" class="btn btn-ghost open-tool-btn" data-tool="Background Remover">Open Tool →</button>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GOVGIGZ BANNER -->
+    <section class="section govgigz-section tool-section" id="govgigz" data-section="govgigz">
+      <div class="container">
+        <div class="govgigz-banner fade-in tool-card" data-category="govgigz" data-keywords="govgigz government jobs nz new zealand au australia sg singapore verified">
+          <div class="govgigz-content">
+            <div class="govgigz-flags" aria-label="New Zealand, Australia, Singapore">🇳🇿 🇦🇺 🇸🇬</div>
+            <h2 class="govgigz-title">GovGigz - Govt Jobs NZ • AU • SG - Verified</h2>
+            <p class="govgigz-text">
+              Latest verified government jobs in New Zealand, Australia &amp; Singapore. No fake jobs.
+            </p>
+            <div class="govgigz-actions">
+              <a href="#govgigz-portal" class="btn btn-white btn-lg open-tool-btn" data-tool="GovGigz Verified Jobs Portal">Visit GovGigz →</a>
+              <span class="govgigz-meta">Updated Today • 100% Verified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- INTERACTIVE TOOL PREVIEW MODAL -->
+  <div class="modal-backdrop" id="toolModal" hidden>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalToolTitle">
+      <button type="button" class="modal-close" id="closeModalBtn" aria-label="Close modal">✕</button>
+      <div class="modal-badge">100% Free • No Sign-up • Instant Browser Processing</div>
+      <h3 id="modalToolTitle" class="modal-title">Tool Name</h3>
+      <p class="modal-desc">Drop your file below or launch the tool directly in your browser. Zero watermarks, zero limits.</p>
+      <div class="dropzone" id="dropzone">
+        <span class="dropzone-icon">📂</span>
+        <p><strong>Drag &amp; drop files here</strong> or click to browse</p>
+        <small>Files stay private and secure</small>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" id="modalLaunchBtn">Start Now →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Column 1: About -->
+        <div class="footer-col">
+          <a href="#home" class="logo footer-logo">
+            <div class="logo-mark" aria-hidden="true">
+              <span class="ribbon ribbon-blue"></span>
+              <span class="ribbon ribbon-cyan"></span>
+              <span class="ribbon ribbon-purple"></span>
+            </div>
+            <span class="logo-text">
+              <span class="logo-oryo">Oryo</span><span class="logo-hub">Hub</span>
+            </span>
+          </a>
+          <p class="footer-about">
+            OryoHub.com is your fast, privacy-first suite of 100+ online PDF, Word, Image, and utility tools — free forever for everyone around the globe.
+          </p>
+        </div>
+
+        <!-- Column 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#privacy">Privacy</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 3: Tools -->
+        <div class="footer-col">
+          <h4>Tools</h4>
+          <ul>
+            <li><a href="#tools" data-select-cat="pdf">PDF Tools</a></li>
+            <li><a href="#tools" data-select-cat="word">Word Tools</a></li>
+            <li><a href="#tools" data-select-cat="image">Image Tools</a></li>
+            <li><a href="#govgigz">GovGigz Jobs</a></li>
+          </ul>
+        </div>
+
+        <!-- Column 4: Languages -->
+        <div class="footer-col">
+          <h4>Languages</h4>
+          <ul class="footer-langs">
+            <li><button type="button" data-code="EN">English</button></li>
+            <li><button type="button" data-code="ES">Español</button></li>
+            <li><button type="button" data-code="FR">Français</button></li>
+            <li><button type="button" data-code="ZH">中文</button></li>
+            <li><button type="button" data-code="UR">اردو</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 OryoHub.com - All Rights Reserved | Made for the World 🌍</p>
+        <div class="footer-legal">
+          <a href="#privacy">Privacy Policy</a>
+          <span>|</span>
+          <a href="#terms">Terms</a>
+          <span>|</span>
+          <a href="#contact">Contact</a>
+          <span>|</span>
+          <a href="#blog">Blog</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const body = document.body;
+      const themeToggle = document.getElementById('themeToggle');
+      const hamburgerBtn = document.getElementById('hamburgerBtn');
+      const navMenu = document.getElementById('navMenu');
+      const langBtn = document.getElementById('langBtn');
+      const langMenu = document.getElementById('langMenu');
+      const selectedLang = document.getElementById('selectedLang');
+
+      const navSearchInput = document.getElementById('navSearchInput');
+      const mainSearchInput = document.getElementById('mainSearchInput');
+      const clearSearchBtn = document.getElementById('clearSearchBtn');
+      const filterPills = document.querySelectorAll('.pill');
+      const toolCards = document.querySelectorAll('.tool-card');
+      const toolSections = document.querySelectorAll('.tool-section');
+      const noResultsMessage = document.getElementById('noResultsMessage');
+      const resetFiltersBtn = document.getElementById('resetFiltersBtn');
+
+      const toolModal = document.getElementById('toolModal');
+      const modalToolTitle = document.getElementById('modalToolTitle');
+      const closeModalBtn = document.getElementById('closeModalBtn');
+      const modalLaunchBtn = document.getElementById('modalLaunchBtn');
+
+      let activeCategory = 'all';
+      let searchQuery = '';
+
+      // 1. DARK MODE (PERSISTED IN LOCALSTORAGE)
+      const savedTheme = localStorage.getItem('oryohub-theme');
+      if (savedTheme === 'dark') {
+        body.classList.add('dark-mode');
+        themeToggle.textContent = '☀️';
+      }
+
+      themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDark = body.classList.contains('dark-mode');
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('oryohub-theme', isDark ? 'dark' : 'light');
+      });
+
+      // 2. MOBILE HAMBURGER MENU
+      hamburgerBtn.addEventListener('click', () => {
+        const isOpen = navMenu.classList.toggle('open');
+        hamburgerBtn.classList.toggle('active', isOpen);
+        hamburgerBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      // 3. LANGUAGE SELECTOR DROPDOWN
+      langBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const isOpen = langMenu.classList.toggle('show');
+        langBtn.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      document.querySelectorAll('[data-code]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const code = btn.getAttribute('data-code');
+          selectedLang.textContent = code;
+          localStorage.setItem('oryohub-lang', code);
+          langMenu.classList.remove('show');
+          langBtn.setAttribute('aria-expanded', 'false');
+        });
+      });
+
+      const savedLang = localStorage.getItem('oryohub-lang');
+      if (savedLang) {
+        selectedLang.textContent = savedLang;
+      }
+
+      document.addEventListener('click', (e) => {
+        if (!langBtn.contains(e.target) && !langMenu.contains(e.target)) {
+          langMenu.classList.remove('show');
+          langBtn.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // 4. LIVE SEARCH & CATEGORY FILTERING
+      function applyFilters() {
+        const q = searchQuery.trim().toLowerCase();
+        let visibleCardsCount = 0;
+
+        clearSearchBtn.hidden = q.length === 0;
+
+        toolCards.forEach((card) => {
+          const title = (card.querySelector('h3, h2')?.textContent || '').toLowerCase();
+          const desc = (card.querySelector('p')?.textContent || '').toLowerCase();
+          const keywords = (card.getAttribute('data-keywords') || '').toLowerCase();
+          const categories = (card.getAttribute('data-category') || '').toLowerCase().split(' ');
+
+          const matchesCategory = activeCategory === 'all' || categories.includes(activeCategory);
+          const matchesQuery =
+            q === '' || title.includes(q) || desc.includes(q) || keywords.includes(q);
+
+          if (matchesCategory && matchesQuery) {
+            card.style.display = '';
+            visibleCardsCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Hide empty sections when filtering/searching
+        toolSections.forEach((section) => {
+          const cardsInSection = Array.from(section.querySelectorAll('.tool-card'));
+          const hasVisible = cardsInSection.some((c) => c.style.display !== 'none');
+          section.style.display = hasVisible ? '' : 'none';
+        });
+
+        noResultsMessage.hidden = visibleCardsCount > 0;
+      }
+
+      function syncSearchInputs(value) {
+        searchQuery = value;
+        navSearchInput.value = value;
+        mainSearchInput.value = value;
+        applyFilters();
+      }
+
+      navSearchInput.addEventListener('input', (e) => {
+        syncSearchInputs(e.target.value);
+      });
+
+      mainSearchInput.addEventListener('input', (e) => {
+        syncSearchInputs(e.target.value);
+      });
+
+      clearSearchBtn.addEventListener('click', () => {
+        syncSearchInputs('');
+        navSearchInput.focus();
+      });
+
+      filterPills.forEach((pill) => {
+        pill.addEventListener('click', () => {
+          filterPills.forEach((p) => p.classList.remove('active'));
+          pill.classList.add('active');
+          activeCategory = pill.getAttribute('data-filter');
+          applyFilters();
+        });
+      });
+
+      document.querySelectorAll('[data-select-cat]').forEach((link) => {
+        link.addEventListener('click', () => {
+          const cat = link.getAttribute('data-select-cat');
+          filterPills.forEach((p) => {
+            p.classList.toggle('active', p.getAttribute('data-filter') === cat);
+          });
+          activeCategory = cat;
+          applyFilters();
+        });
+      });
+
+      resetFiltersBtn.addEventListener('click', () => {
+        activeCategory = 'all';
+        filterPills.forEach((p) => p.classList.toggle('active', p.getAttribute('data-filter') === 'all'));
+        syncSearchInputs('');
+      });
+
+      // 5. TOOL PREVIEW MODAL
+      document.querySelectorAll('.open-tool-btn').forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const toolName = btn.getAttribute('data-tool') || 'OryoHub Tool';
+          modalToolTitle.textContent = toolName;
+          toolModal.hidden = false;
+          document.body.style.overflow = 'hidden';
+        });
+      });
+
+      function closeModal() {
+        toolModal.hidden = true;
+        document.body.style.overflow = '';
+      }
+
+      closeModalBtn.addEventListener('click', closeModal);
+      modalLaunchBtn.addEventListener('click', closeModal);
+      toolModal.addEventListener('click', (e) => {
+        if (e.target === toolModal) closeModal();
+      });
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !toolModal.hidden) closeModal();
+      });
+
+      // 6. SMOOTH SCROLL FADE-IN ANIMATIONS
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.1 }
+      );
+
+      document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    })();
+  </script>
+</body>
+</html>
